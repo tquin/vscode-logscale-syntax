@@ -3,6 +3,7 @@
   "displayName": "LogScale Syntax Highlighting",
   "description": "A syntax highlighter extension for LogScale Query Langauge (LQL), formerly Humio.",
   "icon": "images/logo.png",
+  "publisher": "tquin",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.95.0"
