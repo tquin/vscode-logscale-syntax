@@ -1,0 +1,43 @@
+{
+  "name": "logscale-syntax",
+  "displayName": "LogScale Syntax Highlighting",
+  "description": "A syntax highlighter extension for LogScale Query Langauge (LQL), formerly Humio.",
+  "icon": "images/logo.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "scripts": {
+    "deploy": "vsce publish --yarn"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "logscale",
+        "aliases": [
+          "Logscale Query Language",
+          "logscale"
+        ],
+        "extensions": [
+          ".lql",
+          ".logscale",
+          ".humio"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "logscale",
+        "scopeName": "source.logscale",
+        "path": "./syntaxes/logscale.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.2.1"
+  }
+}

@@ -1,0 +1,15 @@
+#repo = "according-to"
+| case {
+    all.known = * | laws := "of aviation"; // there is no way
+    a.bee = /(?<should>be.+)/i;
+    * | able.to := "fly";
+}
+/* Its wings are too small to get
+its fat little body off the ground. */
+| the.bee =~ in(values=["of", "course", "flies", "anyway"])
+| groupBy([because, bees], function=[
+    count(),
+    collect([dont.care, what.humans]),
+    min(think, as=is.possible)
+])
+
