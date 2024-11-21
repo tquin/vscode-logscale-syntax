@@ -28,6 +28,7 @@ jobs:
       if: runner.os != 'Linux'
   
   deploy:
+    runs-on: ubuntu-latest
     steps:
       - name: Publish
         if: success() && startsWith(github.ref, 'refs/tags/')
