@@ -29,7 +29,7 @@ jobs:
       if: runner.os == 'Linux'
     - run: npm test
       if: runner.os != 'Linux'
-  
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -41,6 +41,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18.x
+
+      - id: version-updated
+        uses: MontyD/package-json-updated-action
+        with:
+          path: package.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - if: ${{ ! steps.version-updated.outputs.has-updated }}
+        run: exit 1
 
       - run: npm install
 
