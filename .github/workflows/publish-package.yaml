@@ -43,7 +43,7 @@ jobs:
           node-version: 18.x
 
       - id: version-updated
-        uses: MontyD/package-json-updated-action
+        uses: MontyD/package-json-updated-action@a7fac26
         with:
           path: package.json
         env:
