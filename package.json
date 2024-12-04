@@ -22,6 +22,7 @@
         "aliases": [
           "Logscale Query Language",
           "CrowdStrike Query Language",
+          "Humio",
           "logscale"
         ],
         "extensions": [
