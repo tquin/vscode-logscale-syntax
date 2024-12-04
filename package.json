@@ -26,7 +26,8 @@
         "extensions": [
           ".lql",
           ".logscale",
-          ".humio"
+          ".humio",
+          ".cql"
         ],
         "configuration": "./language-configuration.json"
       }
