@@ -1,6 +1,6 @@
 # logscale-syntax
 
-A VS Code extension for for LogScale (CrowdStrike) Query Language (formerly Humio) syntax highlighting.
+A VS Code extension for LogScale/CrowdStrike Query Language (formerly Humio) syntax highlighting.
 
 ## Features
 
