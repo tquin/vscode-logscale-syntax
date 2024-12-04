@@ -50,6 +50,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - if: ${{ ! steps.version-updated.outputs.has-updated }}
+        name: You forgot to update package.json's version!
         run: exit 1
 
       - run: npm install
