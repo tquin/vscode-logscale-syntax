@@ -1,15 +1,15 @@
 {
-	"name": "Logscale Query Language",
-	"scopeName": "source.logscale",
-	"patterns": [
-		{
-			"name": "keyword.control.logscale",
-			"match": "\\b(case|match)(?=\\s?\\{)\\b"
-		},
-		{
-			"name": "support.function.logscale",
-			"match": "\\b(array:append|array:contains|array:drop|array:eval|array:filter|array:intersection|array:length|array:reduceAll|array:reduceRow|array:reduceColumn|array:regex|array:rename|array:union|asn|avg|base64Decode|beta:param|beta:repeating|bitfield:extractFlags|bucket|callFunction|coalesce|cidr|collect|communityId|concat|concatArray|copyEvent|count|counterAsRate|createEvents|crypto:md5|crypto:sha1|crypto:sha256|default|defineTable|drop|dropEvent|duration|end|eval|eventFieldCount|eventInternals|eventSize|fieldset|fieldstats|findTimestamp|format|formatDuration|formatTime|geography:distance|geohash|getField|groupBy|hash|hashMatch|hashRewrite|head|if|in|ioc:lookup|ipLocation|join|json:prettyPrint|kvParse|length|linReg|lookup|lower|lowercase|match|math:abs|math:arccos|math:arcsin|math:arctan|math:arctan2|math:ceil|math:cos|math:cosh|math:deg2rad|math:exp|math:expm1|math:floor|math:log|math:log10|math:log1p|math:log2|math:mod|math:pow|math:rad2deg|math:sin|math:sinh|math:spherical2cartesian|math:sqrt|math:tan|math:tanh|max|min|objectArray:eval|now|parseCEF|parseCsv|parseFixedWidth|parseHexString|parseInt|parseJson|parseLEEF|parseTimestamp|parseUri|parseUrl|parseXml|percentile|range|rdns|regex|readFile|rename|replace|round|sample|sankey|select|selectFromMax|selectFromMin|selectLast|selfJoin|selfJoinFilter|series|session|setField|shannonEntropy|sort|split|splitString|start|stats|stdDev|stripAnsiCodes|subnet|sum|table|tail|test|text:contains|time:dayOfMonth|time:dayOfWeek|time:dayOfWeekName|time:dayOfYear|time:hour|time:millisecond|time:minute|time:month|time:monthName|time:second|time:weekOfYear|time:year|timeChart|tokenHash|top|transpose|unit:convert|upper|urlDecode|urlEncode|wildcard|window|worldMap|writeJson|xml:prettyPrint)(?=\\s?\\()\\b"
-		},
+    "name": "Logscale Query Language",
+    "scopeName": "source.logscale",
+    "patterns": [
+        {
+            "name": "keyword.control.logscale",
+            "match": "\\b(case|match)(?=\\s?\\{)\\b"
+        },
+        {
+            "name": "support.function.logscale",
+            "match": "\\b(array:append|array:contains|array:drop|array:eval|array:filter|array:intersection|array:length|array:reduceAll|array:reduceRow|array:reduceColumn|array:regex|array:rename|array:union|asn|avg|base64Decode|beta:param|beta:repeating|bitfield:extractFlags|bucket|callFunction|coalesce|cidr|collect|communityId|concat|concatArray|copyEvent|count|counterAsRate|createEvents|crypto:md5|crypto:sha1|crypto:sha256|default|defineTable|drop|dropEvent|duration|end|eval|eventFieldCount|eventInternals|eventSize|fieldset|fieldstats|findTimestamp|format|formatDuration|formatTime|geography:distance|geohash|getField|groupBy|hash|hashMatch|hashRewrite|head|if|in|ioc:lookup|ipLocation|join|json:prettyPrint|kvParse|length|linReg|lookup|lower|lowercase|match|math:abs|math:arccos|math:arcsin|math:arctan|math:arctan2|math:ceil|math:cos|math:cosh|math:deg2rad|math:exp|math:expm1|math:floor|math:log|math:log10|math:log1p|math:log2|math:mod|math:pow|math:rad2deg|math:sin|math:sinh|math:spherical2cartesian|math:sqrt|math:tan|math:tanh|max|min|objectArray:eval|now|parseCEF|parseCsv|parseFixedWidth|parseHexString|parseInt|parseJson|parseLEEF|parseTimestamp|parseUri|parseUrl|parseXml|percentile|range|rdns|regex|readFile|rename|replace|round|sample|sankey|select|selectFromMax|selectFromMin|selectLast|selfJoin|selfJoinFilter|series|session|setField|shannonEntropy|sort|split|splitString|start|stats|stdDev|stripAnsiCodes|subnet|sum|table|tail|test|text:contains|time:dayOfMonth|time:dayOfWeek|time:dayOfWeekName|time:dayOfYear|time:hour|time:millisecond|time:minute|time:month|time:monthName|time:second|time:weekOfYear|time:year|timeChart|tokenHash|top|transpose|unit:convert|upper|urlDecode|urlEncode|wildcard|window|worldMap|writeJson|xml:prettyPrint)(?=\\s?\\()\\b"
+        },
         {
             "begin": "(?<!\\\\)\"",
             "end": "(?<!\\\\)\"",
@@ -38,5 +38,5 @@
             "end": "\n",
             "name": "comment.line.logscale"
         }
-	]
+    ]
 }
