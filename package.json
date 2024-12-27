@@ -4,7 +4,8 @@
   "description": "A syntax highlighter extension for LogScale Query Langauge (LQL), formerly Humio.",
   "icon": "images/logo.png",
   "publisher": "tquin",
-  "version": "0.0.4",
+  "version": "0.0.5",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.95.0"
   },
@@ -39,6 +40,14 @@
         "language": "logscale",
         "scopeName": "source.logscale",
         "path": "./syntaxes/logscale.tmLanguage.json"
+      },
+      {
+        "injectTo": ["source.yaml"],
+        "scopeName": "logscale.yaml.injection",
+        "path": "./syntaxes/yaml-injection.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.inline.logscale": "logscale"
+        }
       }
     ]
   },

@@ -1,0 +1,15 @@
+name: Packaged alerts!
+description: This is a test rule to see how syntax highlighting works within yaml files
+queryString: >-
+  #repo = "windows"
+  | foo = /bar/i
+  | groupBy([foo], function=count())
+throttleField: "rule.throttle_hash"
+throttleTimeSeconds: 86400 # 1d
+enabled: true
+queryTimestampType: ingest-timestamp
+triggerMode: complete-mode
+searchIntervalSeconds: 3600 # 1h
+labels:
+  - windows
+
