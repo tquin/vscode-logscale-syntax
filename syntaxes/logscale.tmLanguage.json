@@ -25,7 +25,7 @@
             "name": "variable.logscale"
         },
         {
-            "match": "(/[^/]+/)",
+            "match": "(/.+?(?<!\\\\)/)",
             "name": "string.regexp.logscale"
         },
         {

@@ -1,0 +1,6 @@
+
+#repo = cloud
+| message = /("|\/)servicename":"guardduty"/i
+| x = /abc\def\/ghi/ // comment
+| y = /endswithslash\// // comment
+| groupBy([x, y])
