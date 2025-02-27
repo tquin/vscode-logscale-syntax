@@ -25,10 +25,6 @@
             "name": "variable.logscale"
         },
         {
-            "match": "(/.+?(?<!\\\\)/)",
-            "name": "string.regexp.logscale"
-        },
-        {
             "begin": "/\\*",
             "end": "\\*/",
             "name": "comment.block.logscale"
@@ -37,6 +33,10 @@
             "begin": "//",
             "end": "\n",
             "name": "comment.line.logscale"
+        },
+        {
+            "match": "(/.+?(?<!\\\\)/)",
+            "name": "string.regexp.logscale"
         }
     ]
 }
