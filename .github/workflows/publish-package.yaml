@@ -55,7 +55,12 @@ jobs:
 
       - run: npm install
 
-      - name: Publish
+      - name: Publish to Visual Studio Marketplace
         run: npm run deploy
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+      - name: Publish to Open VSX Registry
+        uses: HaaLeo/publish-vscode-extension@v2
+        with:
+          pat: ${{ secrets.OPEN_VSX_TOKEN }}
