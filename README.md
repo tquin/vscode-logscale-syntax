@@ -1,6 +1,6 @@
 # logscale-syntax
 
-A VS Code extension for LogScale/CrowdStrike Query Language (formerly Humio) syntax highlighting. [Get it here.](https://marketplace.visualstudio.com/items?itemName=tquin.logscale-syntax)
+A VS Code extension for LogScale/CrowdStrike Query Language (formerly Humio) syntax highlighting. [Get it here for VS Code](https://marketplace.visualstudio.com/items?itemName=tquin.logscale-syntax), or [here for VSCodium.](https://open-vsx.org/extension/tquin/logscale-syntax)
 
 ## Features
 
