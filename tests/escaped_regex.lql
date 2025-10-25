@@ -3,4 +3,9 @@
 | message = /("|\/)servicename":"guardduty"/i
 | x = /abc\def\/ghi/ // comment
 | y = /endswithslash\// // comment
+| z = /ends with backslash\\/ // and a comment
+| regex(field=@rawstring, regex="simple string")
+| regex(field=@rawstring, regex="escaped \" quote")
+| regex(field=@rawstring, regex="path\\file")
+| regex(field=@rawstring, regex="C:\\\\path\\\\")
 | groupBy([x, y])

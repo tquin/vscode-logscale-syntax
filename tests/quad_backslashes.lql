@@ -1,0 +1,10 @@
+
+// From https://github.com/tquin/vscode-logscale-syntax/issues/12
+
+createEvents(rawstring="Some test data with special characters. Like C:\\File Paths\\ and /forward/slash/paths. Also search for \"C:\\Quoted\\File Paths\\\".") // Create some test data
+
+| regex("Some test data")       | @rawstring=/Some test data/           // Search for a basic pattern with no special characters using each method
+| regex("C:\\\\File Paths\\\\") | @rawstring=/C:\\File Paths\\/         // Search for '\File Paths\' using each method
+| regex("/forward/slash/paths") | @rawstring=/\/forward\/slash\/paths/  // Search for '/forward/slash/paths' using each method
+| regex("test\\sdata")          | @rawstring=/test\sdata/               // Search for a special character (a space) using each method
+| regex("\"C:\\\\Quoted\\\\File\\sPaths\\\\") | @rawstring=/"C:\\Quoted\\File\sPaths\\"/ // Search for a quoted file path using each method
