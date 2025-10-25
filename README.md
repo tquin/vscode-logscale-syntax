@@ -18,3 +18,7 @@ Syntax highlighting:
 Embedded within yaml:
 
 ![screenshot_alert](images/demo_alert_dark_modern.png)
+
+## Development
+
+To test the extension, either use the `F5` shortcut or `Debug: Start Debugging` from the Command Palette to launch an instance with the extension loaded.
