@@ -13,11 +13,11 @@ A VS Code extension for LogScale/CrowdStrike Query Language (formerly Humio) syn
 
 Syntax highlighting:
 
-![screenshot_files](images/demo_dark_modern.png)
+![screenshot_files](images/demo_dark_modern_v2.png)
 
 Embedded within yaml:
 
-![screenshot_alert](images/demo_alert_dark_modern.png)
+![screenshot_alert](images/demo_alerts_dark_modern.png)
 
 ## Development
 
