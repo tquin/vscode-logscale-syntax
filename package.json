@@ -4,7 +4,7 @@
   "description": "A syntax highlighter extension for LogScale Query Langauge (LQL), formerly Humio.",
   "icon": "images/logo.png",
   "publisher": "tquin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "engines": {
     "vscode": "^1.95.0"
@@ -14,8 +14,15 @@
   ],
   "scripts": {
     "deploy": "vsce publish --yarn",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "vscode:prepublish": "yarn compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
   },
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "contributes": {
     "languages": [
       {
@@ -42,19 +49,39 @@
         "path": "./syntaxes/logscale.tmLanguage.json"
       },
       {
-        "injectTo": ["source.yaml"],
+        "injectTo": [
+          "source.yaml"
+        ],
         "scopeName": "source.yaml.injection",
         "path": "./syntaxes/yaml-injection.tmLanguage.json",
         "embeddedLanguages": {
           "meta.embedded.inline.logscale": "logscale"
         }
       }
-    ]
+    ],
+    "configuration": {
+      "title": "LogScale Syntax Highlighting",
+      "properties": {
+        "logscale-syntax.yamlHighlightedKeys": {
+          "type": "array",
+          "default": [
+            "queryString"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "markdownDescription": "List of YAML keys that should apply LQL/CQL syntax highlighting. Changes require window reload."
+        }
+      }
+    }
   },
   "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/vscode": "^1.106.0",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1",
-    "@vscode/vsce": "^3.2.1"
+    "@vscode/vsce": "^3.2.1",
+    "typescript": "^5.9.3"
   },
   "repository": {
     "type": "git",
