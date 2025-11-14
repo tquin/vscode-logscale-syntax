@@ -4,7 +4,7 @@
   "patterns": [
     {
       "comment": "Block scalar style (| or >)",
-      "begin": "(queryString):\\s*(?:(\\|)|(>))([1-9])?([-+])?\\s+$",
+      "begin": "({{QUERY_KEYS}}):\\s*(?:(\\|)|(>))([1-9])?([-+])?\\s+$",
       "beginCaptures": {
         "1": {
           "name": "entity.name.tag.yaml"
@@ -38,7 +38,7 @@
     },
     {
       "comment": "Inline/flow style (quoted string)",
-      "begin": "(queryString):\\s*(\")",
+      "begin": "({{QUERY_KEYS}}):\\s*(\")",
       "beginCaptures": {
         "1": {
           "name": "entity.name.tag.yaml"
@@ -62,7 +62,7 @@
     },
     {
       "comment": "Inline/flow style (unquoted)",
-      "begin": "(queryString):\\s+(?![\"'|>])",
+      "begin": "({{QUERY_KEYS}}):\\s+(?![\"'|>])",
       "beginCaptures": {
         "1": {
           "name": "entity.name.tag.yaml"
